@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagTextView" customModule="feedeo" customModuleProvider="target">
+            <connections>
+                <outlet property="textView" destination="0Xh-87-BID" id="wXv-R6-kIU"/>
+                <outlet property="textViewBottomConstraint" destination="t4f-fi-twG" id="yY3-R4-A3W"/>
+                <outlet property="textViewTopConstraint" destination="YHo-bu-30m" id="vQl-wE-T0K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-87-BID">
+                    <rect key="frame" x="39" y="44" width="312" height="766"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="white87"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ieq-Ja-bFj"/>
+            <color key="backgroundColor" name="black70"/>
+            <constraints>
+                <constraint firstItem="0Xh-87-BID" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="62z-cV-dDw"/>
+                <constraint firstItem="0Xh-87-BID" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="9Or-N4-PrK"/>
+                <constraint firstItem="0Xh-87-BID" firstAttribute="top" secondItem="ieq-Ja-bFj" secondAttribute="top" id="YHo-bu-30m"/>
+                <constraint firstItem="ieq-Ja-bFj" firstAttribute="bottom" secondItem="0Xh-87-BID" secondAttribute="bottom" id="t4f-fi-twG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="black70">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

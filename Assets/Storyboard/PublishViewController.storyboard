@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Publish View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PublishViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PublishViewController" customModule="feedeo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-6B-V40" userLabel="Navigation Bar" customClass="BaseNavigationBar" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="47" width="390" height="54"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="tuj-4B-2Vi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bys-9G-W2p" userLabel="Tag Container">
+                                <rect key="frame" x="0.0" y="101" width="390" height="134"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-QL-1en">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="KqX-Go-0xi"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hoG-oC-nGR">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oe-UD-lab" customClass="LineTextField" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="38" width="342" height="56"/>
+                                        <color key="tintColor" name="mainTint"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="47Z-ol-pts"/>
+                                        </constraints>
+                                        <color key="textColor" name="white87"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" name="white54"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                <color key="value" name="white54"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" name="mainTint"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="placeholder.publish.caption"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderActiveColor">
+                                                <color key="value" name="mainTint"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2b-Zy-H5k" userLabel="Max Length Label">
+                                        <rect key="frame" x="366" y="98" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="white54"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6oe-UD-lab" firstAttribute="trailing" secondItem="h2b-Zy-H5k" secondAttribute="trailing" id="5Da-Pe-OnS"/>
+                                    <constraint firstItem="6oe-UD-lab" firstAttribute="top" secondItem="Lvg-QL-1en" secondAttribute="bottom" constant="6" id="8Dr-Gs-70b"/>
+                                    <constraint firstItem="Lvg-QL-1en" firstAttribute="leading" secondItem="bys-9G-W2p" secondAttribute="leading" id="ImG-bI-Ide"/>
+                                    <constraint firstItem="h2b-Zy-H5k" firstAttribute="top" secondItem="6oe-UD-lab" secondAttribute="bottom" constant="4" id="M56-xa-d5m"/>
+                                    <constraint firstAttribute="trailing" secondItem="6oe-UD-lab" secondAttribute="trailing" constant="24" id="frD-1v-ZMU"/>
+                                    <constraint firstItem="Lvg-QL-1en" firstAttribute="top" secondItem="bys-9G-W2p" secondAttribute="top" id="oMr-25-WhP"/>
+                                    <constraint firstItem="6oe-UD-lab" firstAttribute="leading" secondItem="bys-9G-W2p" secondAttribute="leading" constant="24" id="prW-9d-B2E"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lvg-QL-1en" secondAttribute="trailing" id="t5d-Nm-iBn"/>
+                                    <constraint firstAttribute="height" constant="134" id="tn2-rx-gQ3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAz-kj-85y" userLabel="Player View" customClass="MoviePlayerView" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="235" width="390" height="519"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isProgressViewHidden" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isDurationLabelHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isLetterBoxHidden" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahE-Ea-oVy" userLabel="Preview Container">
+                                <rect key="frame" x="49" y="235" width="292" height="519"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-v8-dco" userLabel="Thumbnail Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="519"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="black100"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XlE-v8-dco" secondAttribute="trailing" id="Ax6-Xv-kQL"/>
+                                    <constraint firstItem="XlE-v8-dco" firstAttribute="leading" secondItem="ahE-Ea-oVy" secondAttribute="leading" id="DbV-Ad-Vcl"/>
+                                    <constraint firstAttribute="bottom" secondItem="XlE-v8-dco" secondAttribute="bottom" id="U5o-bk-T6J"/>
+                                    <constraint firstItem="XlE-v8-dco" firstAttribute="top" secondItem="ahE-Ea-oVy" secondAttribute="top" id="lOk-pv-cMf"/>
+                                    <constraint firstAttribute="width" secondItem="ahE-Ea-oVy" secondAttribute="height" multiplier="9:16" id="uI8-WX-loO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-3E-Fft" userLabel="Publish Button" customClass="CustomButton" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="754" width="390" height="90"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <directionalEdgeInsets key="contentInsets" top="18" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="publish.upload"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                        <color key="value" name="gray51"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                        <color key="value" name="mainTint"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledTextColor">
+                                        <color key="value" name="white30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultTextColor">
+                                        <color key="value" name="white100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="excutePublish:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0El-xl-L54"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="bgDark"/>
+                        <constraints>
+                            <constraint firstItem="ahE-Ea-oVy" firstAttribute="top" secondItem="DAz-kj-85y" secondAttribute="top" id="6Ys-Dz-Gbe"/>
+                            <constraint firstItem="sPP-3E-Fft" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-56" id="F7W-I7-COs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bys-9G-W2p" secondAttribute="trailing" id="HLt-4x-raD"/>
+                            <constraint firstItem="DAz-kj-85y" firstAttribute="bottom" secondItem="sPP-3E-Fft" secondAttribute="top" id="IGy-6i-AaY"/>
+                            <constraint firstItem="ahE-Ea-oVy" firstAttribute="bottom" secondItem="DAz-kj-85y" secondAttribute="bottom" id="MFt-dr-yhj"/>
+                            <constraint firstItem="sPP-3E-Fft" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="S3m-Gz-dWF"/>
+                            <constraint firstItem="bys-9G-W2p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TRe-YC-pUr"/>
+                            <constraint firstItem="1h2-6B-V40" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="X7a-x1-CdI"/>
+                            <constraint firstItem="bys-9G-W2p" firstAttribute="top" secondItem="1h2-6B-V40" secondAttribute="bottom" id="Ynz-ww-4Wa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DAz-kj-85y" secondAttribute="trailing" id="buc-8P-LRo"/>
+                            <constraint firstItem="DAz-kj-85y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cUf-Py-tDc"/>
+                            <constraint firstItem="DAz-kj-85y" firstAttribute="top" secondItem="bys-9G-W2p" secondAttribute="bottom" id="htG-jE-ZQ2"/>
+                            <constraint firstItem="1h2-6B-V40" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lOv-Jt-sJk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1h2-6B-V40" secondAttribute="trailing" id="n30-Ei-nZ3"/>
+                            <constraint firstItem="ahE-Ea-oVy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nWg-QY-ltk"/>
+                            <constraint firstAttribute="bottom" secondItem="sPP-3E-Fft" secondAttribute="bottom" id="oMA-oe-pHl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sPP-3E-Fft" secondAttribute="trailing" id="zqN-8i-on1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="6oe-UD-lab" id="GVK-RL-PsA"/>
+                        <outlet property="maxLengthLabel" destination="h2b-Zy-H5k" id="r5d-bB-rEF"/>
+                        <outlet property="navigationBar" destination="1h2-6B-V40" id="r0H-gL-sRC"/>
+                        <outlet property="playerView" destination="DAz-kj-85y" id="s3e-lR-bmC"/>
+                        <outlet property="previewContainerView" destination="ahE-Ea-oVy" id="vLe-g8-Xer"/>
+                        <outlet property="publishButton" destination="sPP-3E-Fft" id="e8K-oW-SoY"/>
+                        <outlet property="tagCollectionView" destination="Lvg-QL-1en" id="DOD-Zc-9a7"/>
+                        <outlet property="thumbnailView" destination="XlE-v8-dco" id="YBE-pD-0VX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="4"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="6oe-UD-lab">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="sPP-3E-Fft">
+            <size key="intrinsicContentSize" width="51" height="38.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="bgDark">
+            <color red="0.071000002324581146" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black100">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray51">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainTint">
+            <color red="1" green="0.33300000429153442" blue="0.40799999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white30">
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white54">
+            <color red="1" green="1" blue="1" alpha="0.54000002145767212" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

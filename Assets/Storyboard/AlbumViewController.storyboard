@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AlbumViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AlbumViewController" customModule="feedeo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch1-Rx-nim" customClass="BaseNavigationBar" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="48" width="414" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="e2p-Ei-LKZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDe-e8-xmP" userLabel="Player View" customClass="MoviePlayerView" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrT-hn-Fgg" userLabel="Placeholder View">
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkl-3o-NwL">
+                                        <rect key="frame" x="189" y="387.5" width="36" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="white54"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="placeholder.album.choose"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="bgDark"/>
+                                <constraints>
+                                    <constraint firstItem="gkl-3o-NwL" firstAttribute="centerY" secondItem="JrT-hn-Fgg" secondAttribute="centerY" id="AVp-Pe-I2c"/>
+                                    <constraint firstItem="gkl-3o-NwL" firstAttribute="centerX" secondItem="JrT-hn-Fgg" secondAttribute="centerX" id="tkQ-ds-RNL"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CeA-Bw-zzj" userLabel="Album View">
+                                <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
+                                <color key="backgroundColor" name="bgDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Qnu-lK-Sc9"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vz5-Kx-qko">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ch1-Rx-nim" secondAttribute="trailing" id="GmU-1c-3pJ"/>
+                            <constraint firstItem="JrT-hn-Fgg" firstAttribute="bottom" secondItem="UDe-e8-xmP" secondAttribute="bottom" id="JAm-1K-Ocx"/>
+                            <constraint firstItem="UDe-e8-xmP" firstAttribute="bottom" secondItem="CeA-Bw-zzj" secondAttribute="top" id="M0P-Bw-eJU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UDe-e8-xmP" secondAttribute="trailing" id="T7h-5m-A7A"/>
+                            <constraint firstItem="JrT-hn-Fgg" firstAttribute="trailing" secondItem="UDe-e8-xmP" secondAttribute="trailing" id="Tg6-wI-ppb"/>
+                            <constraint firstItem="JrT-hn-Fgg" firstAttribute="top" secondItem="UDe-e8-xmP" secondAttribute="top" id="Vpu-O0-WWH"/>
+                            <constraint firstItem="ch1-Rx-nim" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WIp-qh-dvv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CeA-Bw-zzj" secondAttribute="trailing" id="bpq-0p-ZtS"/>
+                            <constraint firstItem="UDe-e8-xmP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hMj-AY-lwk"/>
+                            <constraint firstItem="JrT-hn-Fgg" firstAttribute="leading" secondItem="UDe-e8-xmP" secondAttribute="leading" id="kUF-OL-Tht"/>
+                            <constraint firstItem="CeA-Bw-zzj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ntO-eS-lrf"/>
+                            <constraint firstItem="ch1-Rx-nim" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="o1v-Cb-oW7"/>
+                            <constraint firstAttribute="bottom" secondItem="CeA-Bw-zzj" secondAttribute="bottom" id="wDm-8f-J3H"/>
+                            <constraint firstItem="UDe-e8-xmP" firstAttribute="top" secondItem="ch1-Rx-nim" secondAttribute="bottom" id="xzF-Bu-QUS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumCollectionView" destination="CeA-Bw-zzj" id="hSA-2R-49l"/>
+                        <outlet property="albumCollectionViewHeightConstraint" destination="Qnu-lK-Sc9" id="Qhf-ch-e4y"/>
+                        <outlet property="navigationBar" destination="ch1-Rx-nim" id="Pym-hk-2Kc"/>
+                        <outlet property="placeholderView" destination="JrT-hn-Fgg" id="kre-EZ-1JB"/>
+                        <outlet property="playerView" destination="UDe-e8-xmP" id="9Bb-gb-0Zi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="bgDark">
+            <color red="0.071000002324581146" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white54">
+            <color red="1" green="1" blue="1" alpha="0.54000002145767212" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="gTV-IL-0wX" customClass="TagCell" customModule="feedeo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-g0-61a">
+                        <rect key="frame" x="12" y="16.666666666666668" width="161" height="17.000000000000004"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="white87"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVj-Oj-tUI">
+                        <rect key="frame" x="173" y="13" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="iJ1-vb-7R1"/>
+                            <constraint firstAttribute="height" constant="24" id="n8h-Vj-6Te"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="icTagDelete"/>
+                        <connections>
+                            <action selector="handleRemoveItem:" destination="gTV-IL-0wX" eventType="touchUpInside" id="daQ-EG-xmE"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="white30"/>
+            <constraints>
+                <constraint firstItem="HVj-Oj-tUI" firstAttribute="leading" secondItem="tk9-g0-61a" secondAttribute="trailing" id="33P-Dt-O2L"/>
+                <constraint firstItem="HVj-Oj-tUI" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="8UI-zB-VlP"/>
+                <constraint firstAttribute="trailing" secondItem="HVj-Oj-tUI" secondAttribute="trailing" constant="8" id="HSU-ih-V0h"/>
+                <constraint firstItem="tk9-g0-61a" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="qFL-Cz-g9v"/>
+                <constraint firstItem="tk9-g0-61a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="wzd-RN-qRC"/>
+            </constraints>
+            <size key="customSize" width="205" height="50"/>
+            <connections>
+                <outlet property="label" destination="tk9-g0-61a" id="F3G-2P-fmL"/>
+            </connections>
+            <point key="canvasLocation" x="153.07692307692307" y="20.616113744075829"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icTagDelete" width="24" height="24"/>
+        <namedColor name="white30">
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

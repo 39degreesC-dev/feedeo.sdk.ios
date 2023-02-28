@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  feedeo
+
+  Created by 김지수 on 2022/08/10.
+  
+*/
+
+"filter.sm.description" = "Shinning Morning";
+"filter.ca.description" = "Cozy Afternoon";
+"filter.dd.description" = "Drowsy Dinner";
+"filter.cd.description" = "Craving Desert";
+"filter.fd.description" = "Full Dinner";
+"filter.gc.description" = "In the Grey City";
+"filter.bs.description" = "In the Blue Sea";
+"filter.gf.description" = "In the Green Forest";
+"filter.lc.description" = "Lovely Clouds";
+"filter.of.description" = "Outdoor Film";
+"filter.if.description" = "Indoor Film";
+"filter.bw.description" = "B&W Monochrom";
+"filter.wm.description" = "Warm Monochrom";
+"filter.cm.description" = "Cool Monochrom";
+
+"filter" = "Filter";
+"upload" = "Upload";
+"undo" = "Undo";
+"done" = "Done";
+"flash" = "Flash";
+"grid" = "Grid";
+"timer" = "Timer";
+"notice" = "Notice";
+"next" = "Next";
+"trim" = "Trim";
+"video" = "Video";
+"album" = "Album";
+"template" = "Template";
+"music" = "Music";
+"export" = "Export";
+"edit" = "Edit";
+
+"publish.title" = "Shortform enrollment";
+"publish.upload" = "Upload";
+"notice.check.close" = "Dont' show again";
+"notice.close" = "Close";
+"notice" = "Notice";
+"trim.totalDuration" = "Total duration of selected videos";
+"publish.tag.addition" = "Tag Add";
+"mux.music.clear" = "Edit videos without music";
+"placeholder.album.choose" = "Choose videos to edit";
+"placeholder.publish.caption" = "Input Text";
+"placeholder.publish.maxlengh" = "%d/%d";
+
+"clear.music" = "Edit videos without music";
+
+"alert.action.ok" = "OK";
+"alert.action.cancel" = "Cancel";
+"alert.action.save" = "Save";
+"alert.album.exceededMaximum" = "The maximum number of choices is exceeded";
+"alert.album.chooseVideo" = "Choose videos to edit";
+"alert.trim.exceededMaximum.title" = "Trim up to 60 seconds";
+"alert.trim.exceededMaximum.message" = "";
+"alert.trim.back" = "Are you sure you want to quit the editing?";
+"alert.action.mux.ok" = "Trim it again";
+"alert.mux.back" = "Are you sure you want to trim your video again?";
+"alert.publish.upload" = "Save video your gallery";
+"alert.publish.back" = "Are you sure you want to quit without uploading?";
+"alert.publish.tag.exist" = "Tag already exists";
+"alert.publish.tag.empty" = "Tag field cannot be blank";
+
+"loading.encoding" = "Encoding video\nDo not close the app or switch to other apps";
+"loading.uploading" = "Uploading video\nDo not close the app or switch to other apps";

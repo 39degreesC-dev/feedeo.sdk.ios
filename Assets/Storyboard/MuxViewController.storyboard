@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mux View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MuxViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MuxViewController" customModule="feedeo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOy-lS-Mw8" userLabel="Navigation Bar" customClass="BaseNavigationBar" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="48" width="414" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dco-rJ-DNA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-29-Tua" userLabel="Player View" customClass="MoviePlayerView" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="414" height="702"/>
+                                <color key="backgroundColor" name="bgDark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isProgressViewHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isTemplateViewHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isLetterBoxHidden" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GRc-om-mgf">
+                                <rect key="frame" x="0.0" y="620" width="414" height="186"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6d-cN-gQC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDN-pk-ald">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="56" id="xgo-mh-AJg"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icTemplateNone"/>
+                                                <connections>
+                                                    <action selector="clearTemplate:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s5x-ZZ-l8z"/>
+                                                </connections>
+                                            </button>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-Hd-AG6" customClass="InitialSelectionCollectionView" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="4X1-82-djb"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9mP-JT-lXz">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zCJ-c6-YKH">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="130"/>
+                                        <color key="backgroundColor" name="sheetDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="apL-WS-JiG"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HxB-Ng-Cch">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="sheetDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zCJ-c6-YKH" secondAttribute="trailing" id="3E3-rO-dQp"/>
+                                    <constraint firstItem="zCJ-c6-YKH" firstAttribute="leading" secondItem="GRc-om-mgf" secondAttribute="leading" id="h5S-We-6vH"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K6x-0z-eX7" customClass="InitialSelectionCollectionView" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="696" width="414" height="110"/>
+                                <color key="backgroundColor" name="sheetDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="02Q-7w-dAK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vJP-Jn-Ym6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8W5-92-2ik" userLabel="Music Container View">
+                                <rect key="frame" x="0.0" y="608" width="414" height="198"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s9p-wr-xax">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" name="sheetDark"/>
+                                <constraints>
+                                    <constraint firstItem="s9p-wr-xax" firstAttribute="top" secondItem="8W5-92-2ik" secondAttribute="top" id="PbE-Jj-mYo"/>
+                                    <constraint firstAttribute="bottom" secondItem="s9p-wr-xax" secondAttribute="bottom" id="bF4-L9-Da8"/>
+                                    <constraint firstAttribute="height" constant="198" id="jgT-fj-QQO"/>
+                                    <constraint firstItem="s9p-wr-xax" firstAttribute="leading" secondItem="8W5-92-2ik" secondAttribute="leading" id="lwK-ey-DoO"/>
+                                    <constraint firstAttribute="trailing" secondItem="s9p-wr-xax" secondAttribute="trailing" id="qgY-jK-2k7"/>
+                                </constraints>
+                            </view>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EuO-sC-TNs">
+                                <rect key="frame" x="0.0" y="698" width="414" height="108"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14f-gE-iiy">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
+                                        <color key="backgroundColor" name="sheetDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="0IB-c8-KuY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-sq-jb3" customClass="TrimRangeView" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="84"/>
+                                        <color key="backgroundColor" name="sheetDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="JKu-fB-SrB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LT3-nv-MTV">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="16"/>
+                                        <color key="backgroundColor" name="sheetDark"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="zYZ-tA-H1g"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="14f-gE-iiy" firstAttribute="leading" secondItem="EuO-sC-TNs" secondAttribute="leading" id="GRS-gy-ZTZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="14f-gE-iiy" secondAttribute="trailing" id="c7x-vD-O8c"/>
+                                    <constraint firstAttribute="trailing" secondItem="LT3-nv-MTV" secondAttribute="trailing" id="dM6-mQ-eyv"/>
+                                    <constraint firstItem="LT3-nv-MTV" firstAttribute="leading" secondItem="EuO-sC-TNs" secondAttribute="leading" id="u7E-VZ-Ldd"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tug-pS-E8f" userLabel="Bottom Menu Bar">
+                                <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7O-sK-Xp7" userLabel="Template Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icMuxTemplate"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="template"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiF-be-Yw3" userLabel="Filter Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icMuxFilter"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="filter"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lah-7h-ATf" userLabel="Music Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icMuxMusic"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="music"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nip-Rz-qKn" userLabel="Trim Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icMuxTrim"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="trim"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="bgDark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="8gZ-s6-90o"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-01-5dD" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" name="bgDark"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="bgDark"/>
+                        <constraints>
+                            <constraint firstItem="K6x-0z-eX7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1Ii-wt-jP2"/>
+                            <constraint firstItem="EuO-sC-TNs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2BG-wQ-4To"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K6x-0z-eX7" secondAttribute="trailing" id="30R-iO-7LB"/>
+                            <constraint firstItem="GRc-om-mgf" firstAttribute="bottom" secondItem="tug-pS-E8f" secondAttribute="top" id="3SA-gI-QJw"/>
+                            <constraint firstItem="GRc-om-mgf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="A97-0T-ZW2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tug-pS-E8f" secondAttribute="trailing" id="Adr-2h-DB5"/>
+                            <constraint firstItem="IN6-29-Tua" firstAttribute="bottom" secondItem="tug-pS-E8f" secondAttribute="top" id="D7A-JV-LJH"/>
+                            <constraint firstItem="K6x-0z-eX7" firstAttribute="bottom" secondItem="tug-pS-E8f" secondAttribute="top" id="Dq3-l0-qwv"/>
+                            <constraint firstItem="IN6-29-Tua" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EWt-Ih-EjX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="tug-pS-E8f" secondAttribute="leading" id="Eo2-fR-tXZ"/>
+                            <constraint firstItem="8W5-92-2ik" firstAttribute="bottom" secondItem="tug-pS-E8f" secondAttribute="top" id="Gn8-Uj-Ggl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HOy-lS-Mw8" secondAttribute="trailing" id="Im4-Kw-l2s"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8W5-92-2ik" secondAttribute="trailing" id="O17-67-TyP"/>
+                            <constraint firstItem="DOG-01-5dD" firstAttribute="top" secondItem="tug-pS-E8f" secondAttribute="bottom" id="PM6-9u-gCj"/>
+                            <constraint firstItem="IN6-29-Tua" firstAttribute="top" secondItem="HOy-lS-Mw8" secondAttribute="bottom" id="Rfv-I2-xGc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tug-pS-E8f" secondAttribute="bottom" id="YTX-wY-o7a"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GRc-om-mgf" secondAttribute="trailing" id="bIm-MW-I4e"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DOG-01-5dD" secondAttribute="trailing" id="bwc-wD-X3G"/>
+                            <constraint firstItem="DOG-01-5dD" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="fcF-XH-vAY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EuO-sC-TNs" secondAttribute="trailing" id="jEz-jk-yRE"/>
+                            <constraint firstItem="8W5-92-2ik" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qtp-XY-kkW"/>
+                            <constraint firstItem="HOy-lS-Mw8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rrV-D5-BcK"/>
+                            <constraint firstItem="EuO-sC-TNs" firstAttribute="bottom" secondItem="tug-pS-E8f" secondAttribute="top" id="vaa-Vm-MAD"/>
+                            <constraint firstItem="IN6-29-Tua" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="x84-Kb-12j"/>
+                            <constraint firstItem="HOy-lS-Mw8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="xRZ-cj-4Lc"/>
+                            <constraint firstItem="DOG-01-5dD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yfx-7d-t50"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterButton" destination="AiF-be-Yw3" id="JiC-IQ-gw0"/>
+                        <outlet property="filterCollectionView" destination="K6x-0z-eX7" id="U5k-KA-EBN"/>
+                        <outlet property="filterCollectionViewBottomLayout" destination="Dq3-l0-qwv" id="hqr-II-rPx"/>
+                        <outlet property="menuBar" destination="tug-pS-E8f" id="VIc-WF-Okn"/>
+                        <outlet property="musicButton" destination="lah-7h-ATf" id="sxf-Oa-CEc"/>
+                        <outlet property="musicContainerView" destination="8W5-92-2ik" id="xoy-ee-aKl"/>
+                        <outlet property="musicListView" destination="s9p-wr-xax" id="SvD-dZ-AD0"/>
+                        <outlet property="musicListViewBottomLayout" destination="Gn8-Uj-Ggl" id="wNe-eX-p5B"/>
+                        <outlet property="navigationBar" destination="HOy-lS-Mw8" id="quW-6D-lzr"/>
+                        <outlet property="playerView" destination="IN6-29-Tua" id="Rr2-tR-qO5"/>
+                        <outlet property="templateButton" destination="p7O-sK-Xp7" id="FY5-KA-H1z"/>
+                        <outlet property="templateCategoryCollectionView" destination="LZb-Hd-AG6" id="9EL-sY-aq9"/>
+                        <outlet property="templateClearButton" destination="TDN-pk-ald" id="gjC-Fx-Msr"/>
+                        <outlet property="templateCollectionView" destination="zCJ-c6-YKH" id="9vb-EW-IJX"/>
+                        <outlet property="templateView" destination="GRc-om-mgf" id="CDy-Rd-1AE"/>
+                        <outlet property="templateViewBottomLayout" destination="3SA-gI-QJw" id="kPl-2n-7Zf"/>
+                        <outlet property="trimButton" destination="nip-Rz-qKn" id="YRH-JI-V31"/>
+                        <outlet property="trimRangeView" destination="u7Y-sq-jb3" id="jNy-9E-KJK"/>
+                        <outlet property="trimView" destination="EuO-sC-TNs" id="Dug-O4-1gL"/>
+                        <outlet property="trimViewBottomLayout" destination="vaa-Vm-MAD" id="rJb-EL-fHi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icMuxFilter" width="24" height="24"/>
+        <image name="icMuxMusic" width="24" height="24"/>
+        <image name="icMuxTemplate" width="24" height="24"/>
+        <image name="icMuxTrim" width="24" height="24"/>
+        <image name="icTemplateNone" width="24" height="24"/>
+        <namedColor name="bgDark">
+            <color red="0.071000002324581146" green="0.071000002324581146" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sheetDark">
+            <color red="0.14900000393390656" green="0.14900000393390656" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

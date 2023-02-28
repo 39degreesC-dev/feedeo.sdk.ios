@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RecordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="RecordViewController" customModule="feedeo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQc-gG-snD" userLabel="Render View" customClass="RenderMetalView" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="82.666666666666686" width="428" height="760.66666666666652"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nQc-gG-snD" secondAttribute="height" multiplier="9:16" id="zfe-21-buM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QxE-xp-5RJ" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="82.666666666666686" width="428" height="760.66666666666652"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuJ-QW-rqk" userLabel="Grid View" customClass="GridView" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="761"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfColumns">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfRows">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YuJ-QW-rqk" firstAttribute="leading" secondItem="QxE-xp-5RJ" secondAttribute="leading" id="GLm-Yb-VA9"/>
+                                    <constraint firstAttribute="trailing" secondItem="YuJ-QW-rqk" secondAttribute="trailing" id="SRH-rD-aUm"/>
+                                    <constraint firstItem="YuJ-QW-rqk" firstAttribute="top" secondItem="QxE-xp-5RJ" secondAttribute="top" id="Y07-36-2MJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="YuJ-QW-rqk" secondAttribute="bottom" id="qxk-Wx-ceg"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dbT-EC-NS3" appends="YES" id="0zv-oU-dpQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jg-SA-h8W" customClass="BaseNavigationBar" customModule="feedeo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="47" width="428" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="xLB-YB-RUk"/>
+                                </constraints>
+                            </view>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wEx-nf-FCW">
+                                <rect key="frame" x="134" y="111" width="278" height="72"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAo-uL-yHD" userLabel="Flash Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="11" width="44" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="PFm-Uc-RXL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icCameraFlash"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="flash"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                <color key="value" name="white87"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-Na-cOD" userLabel="Grid Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="76" y="11" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="grid"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icCameraGrid"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                <color key="value" name="white87"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRZ-HE-ybQ" userLabel="Timer Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="146" y="11" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icCameraTimer"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="timer"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                <color key="value" name="white87"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqT-1L-MK4" userLabel="Notice Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="216" y="11" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="notice"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icMainNotice"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                <size key="value" width="24" height="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                <color key="value" name="white87"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="black80"/>
+                                <constraints>
+                                    <constraint firstItem="FRZ-HE-ybQ" firstAttribute="width" secondItem="rAo-uL-yHD" secondAttribute="width" multiplier="1.13636" id="CiC-NQ-KmF"/>
+                                    <constraint firstItem="jqT-1L-MK4" firstAttribute="width" secondItem="rAo-uL-yHD" secondAttribute="width" multiplier="1.13636" id="h0u-cn-ui5"/>
+                                    <constraint firstAttribute="height" constant="72" id="h5e-uG-mdS"/>
+                                    <constraint firstItem="EWX-Na-cOD" firstAttribute="width" secondItem="rAo-uL-yHD" secondAttribute="width" multiplier="1.13636" id="lwo-hh-1CW"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="12" bottom="0.0" trailing="12"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmx-ar-lDd" userLabel="Record Actions View">
+                                <rect key="frame" x="0.0" y="721.33333333333337" width="428" height="84"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLq-NQ-yHd" userLabel="Left Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="84"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0p-vz-EpU" userLabel="Filter Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="35" width="172" height="56.333333333333343"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icCameraFilter"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="filter"/>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                        <size key="value" width="36" height="36"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Y0p-vz-EpU" firstAttribute="centerY" secondItem="hLq-NQ-yHd" secondAttribute="centerY" id="T6w-TU-zcG"/>
+                                            <constraint firstItem="Y0p-vz-EpU" firstAttribute="centerX" secondItem="hLq-NQ-yHd" secondAttribute="centerX" id="TEd-wG-CkG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="611-M9-eSY" userLabel="Center Container View">
+                                        <rect key="frame" x="172" y="0.0" width="84" height="84"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Vg-xM-eoV" userLabel="Record Button" customClass="CircleProgressView" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="8" width="68" height="68"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-Mb-TZy" customClass="RecordButton" customModule="feedeo" customModuleProvider="target">
+                                                        <rect key="frame" x="22" y="22" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="hOM-zg-1bl"/>
+                                                            <constraint firstAttribute="height" constant="24" id="iaa-L5-E0C"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="icRecordStart"/>
+                                                        <connections>
+                                                            <action selector="executeRecord:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lRS-RD-6UM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="HwA-Mb-TZy" firstAttribute="centerY" secondItem="1Vg-xM-eoV" secondAttribute="centerY" id="CvU-hb-IUp"/>
+                                                    <constraint firstAttribute="width" constant="68" id="IXa-Zq-WNd"/>
+                                                    <constraint firstItem="HwA-Mb-TZy" firstAttribute="centerX" secondItem="1Vg-xM-eoV" secondAttribute="centerX" id="LuW-zv-9VP"/>
+                                                    <constraint firstAttribute="height" constant="68" id="Ttd-Lg-BXF"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="1Vg-xM-eoV" firstAttribute="centerX" secondItem="611-M9-eSY" secondAttribute="centerX" id="H0v-5y-d1x"/>
+                                            <constraint firstAttribute="width" constant="84" id="IIa-Ir-Ued"/>
+                                            <constraint firstAttribute="height" constant="84" id="LLx-fV-TMx"/>
+                                            <constraint firstItem="1Vg-xM-eoV" firstAttribute="centerY" secondItem="611-M9-eSY" secondAttribute="centerY" id="TY5-nb-D43"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vc2-dA-4zB" userLabel="Right Container View">
+                                        <rect key="frame" x="256" y="0.0" width="172" height="84"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-Ln-nSR" userLabel="Album Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="35" width="172" height="56.333333333333343"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="upload"/>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                        <size key="value" width="36" height="36"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="NQQ-Ln-nSR" firstAttribute="centerY" secondItem="vc2-dA-4zB" secondAttribute="centerY" id="frU-SF-gdN"/>
+                                            <constraint firstItem="NQQ-Ln-nSR" firstAttribute="centerX" secondItem="vc2-dA-4zB" secondAttribute="centerX" id="l42-zP-oba"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="7i4-YL-GGH" userLabel="Recording Action Stack View">
+                                        <rect key="frame" x="342" y="0.0" width="0.0" height="84"/>
+                                        <subviews>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-TQ-PwB" userLabel="Undo Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="84"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icRecordUndo"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="Undo"/>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                        <size key="value" width="36" height="36"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hp8-gN-oGS" userLabel="Done Button" customClass="StackButton" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="84"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icRecordDone"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedKey" value="done"/>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                                        <size key="value" width="36" height="36"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vc2-dA-4zB" secondAttribute="bottom" id="5tS-9a-tdB"/>
+                                    <constraint firstItem="611-M9-eSY" firstAttribute="centerX" secondItem="vmx-ar-lDd" secondAttribute="centerX" id="7dj-yP-79M"/>
+                                    <constraint firstAttribute="height" secondItem="611-M9-eSY" secondAttribute="height" id="Bdm-Ww-59P"/>
+                                    <constraint firstAttribute="bottom" secondItem="7i4-YL-GGH" secondAttribute="bottom" id="EpN-Mc-J55"/>
+                                    <constraint firstItem="7i4-YL-GGH" firstAttribute="centerX" secondItem="vc2-dA-4zB" secondAttribute="centerX" id="JJJ-9Q-fkx"/>
+                                    <constraint firstAttribute="bottom" secondItem="hLq-NQ-yHd" secondAttribute="bottom" id="Kny-WG-oPL"/>
+                                    <constraint firstItem="7i4-YL-GGH" firstAttribute="top" secondItem="vmx-ar-lDd" secondAttribute="top" id="LDh-az-fT4"/>
+                                    <constraint firstItem="hLq-NQ-yHd" firstAttribute="leading" secondItem="vmx-ar-lDd" secondAttribute="leading" id="Ncd-K6-zzE"/>
+                                    <constraint firstItem="hLq-NQ-yHd" firstAttribute="top" secondItem="vmx-ar-lDd" secondAttribute="top" id="WNp-or-BJ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="vc2-dA-4zB" secondAttribute="trailing" id="Xup-kx-FSR"/>
+                                    <constraint firstItem="7i4-YL-GGH" firstAttribute="centerY" secondItem="vc2-dA-4zB" secondAttribute="centerY" id="beT-Ug-mmU"/>
+                                    <constraint firstItem="hLq-NQ-yHd" firstAttribute="trailing" secondItem="611-M9-eSY" secondAttribute="leading" id="pn1-L1-T4g"/>
+                                    <constraint firstItem="vc2-dA-4zB" firstAttribute="top" secondItem="vmx-ar-lDd" secondAttribute="top" id="pxn-lS-LBa"/>
+                                    <constraint firstItem="611-M9-eSY" firstAttribute="centerY" secondItem="vmx-ar-lDd" secondAttribute="centerY" id="vLn-s1-dkf"/>
+                                    <constraint firstItem="vc2-dA-4zB" firstAttribute="leading" secondItem="611-M9-eSY" secondAttribute="trailing" id="wc6-5J-pMd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-yK-0fG" userLabel="Zoom button">
+                                <rect key="frame" x="386" y="683.33333333333337" width="28" height="28"/>
+                                <color key="backgroundColor" name="white100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="9G0-gH-hDa"/>
+                                    <constraint firstAttribute="width" constant="28" id="dRc-OI-gqa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="1x">
+                                    <color key="titleColor" name="black100"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="black32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="executeZoom:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="k9b-3j-gjs"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-p1-UzG" userLabel="Record Duration Label">
+                                <rect key="frame" x="214" y="835.33333333333337" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" name="white100"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="black32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-Fu-MSN">
+                                <rect key="frame" x="0.0" y="760" width="428" height="132"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWt-x4-7sd" userLabel="Intensity Slider" customClass="TickerSlider" customModule="feedeo" customModuleProvider="target">
+                                        <rect key="frame" x="49.333333333333343" y="0.0" width="329.33333333333326" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="9oY-Me-oy9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeIntensity:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Gig-48-bL9"/>
+                                        </connections>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a6r-Qd-p5p">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="132"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-z0-Ynb">
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="8"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="8" id="OPT-jG-pjl"/>
+                                                </constraints>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lvo-hd-mgF" customClass="InitialSelectionCollectionView" customModule="feedeo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="16" width="428" height="84"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="84" id="2KM-HC-Fch"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pXI-ZZ-9bv">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXi-ht-BBh" userLabel="Fold Button">
+                                                <rect key="frame" x="202" y="108" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="3Fd-oe-zNf"/>
+                                                    <constraint firstAttribute="height" constant="24" id="H9C-Cy-bb4"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icFoldDown"/>
+                                                <connections>
+                                                    <action selector="executeFoldFilterList:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DeP-sW-xCT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="sheetDark"/>
+                                        <constraints>
+                                            <constraint firstItem="4lg-z0-Ynb" firstAttribute="leading" secondItem="a6r-Qd-p5p" secondAttribute="leading" id="Ulz-P4-aS7"/>
+                                            <constraint firstAttribute="trailing" secondItem="lvo-hd-mgF" secondAttribute="trailing" id="VS4-as-NOf"/>
+                                            <constraint firstAttribute="trailing" secondItem="4lg-z0-Ynb" secondAttribute="trailing" id="q03-TQ-rGr"/>
+                                            <constraint firstItem="lvo-hd-mgF" firstAttribute="leading" secondItem="a6r-Qd-p5p" secondAttribute="leading" id="xuP-xe-xfI"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AWt-x4-7sd" firstAttribute="width" secondItem="UN9-Fu-MSN" secondAttribute="width" multiplier="0.77" id="0Y1-6T-AZf"/>
+                                    <constraint firstItem="a6r-Qd-p5p" firstAttribute="leading" secondItem="UN9-Fu-MSN" secondAttribute="leading" id="4bk-DH-8q6"/>
+                                    <constraint firstAttribute="trailing" secondItem="a6r-Qd-p5p" secondAttribute="trailing" id="56J-Dy-P8B"/>
+                                </constraints>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqF-Ke-q6N">
+                                <rect key="frame" x="155.66666666666666" y="439.66666666666669" width="116.66666666666666" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" name="white100"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IzA-p1-UzG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="01G-Lx-LYi"/>
+                            <constraint firstItem="LqF-Ke-q6N" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="0OR-Wi-fid"/>
+                            <constraint firstItem="nQc-gG-snD" firstAttribute="bottom" secondItem="IzA-p1-UzG" secondAttribute="bottom" constant="8" id="3IE-4N-aem"/>
+                            <constraint firstItem="UN9-Fu-MSN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3bs-xG-m7e"/>
+                            <constraint firstItem="vmx-ar-lDd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CwD-Rk-dWv"/>
+                            <constraint firstItem="2Jg-SA-h8W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DZb-mi-HV3"/>
+                            <constraint firstItem="QxE-xp-5RJ" firstAttribute="centerX" secondItem="nQc-gG-snD" secondAttribute="centerX" id="Fav-Lw-UfO"/>
+                            <constraint firstItem="h2O-yK-0fG" firstAttribute="bottom" secondItem="vmx-ar-lDd" secondAttribute="top" constant="-10" id="HaJ-8Z-Rqc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UN9-Fu-MSN" secondAttribute="trailing" id="JHA-qS-Zm5"/>
+                            <constraint firstItem="QxE-xp-5RJ" firstAttribute="centerY" secondItem="nQc-gG-snD" secondAttribute="centerY" id="LXv-6N-aTA"/>
+                            <constraint firstItem="QxE-xp-5RJ" firstAttribute="height" secondItem="nQc-gG-snD" secondAttribute="height" id="OB2-77-I0S"/>
+                            <constraint firstItem="nQc-gG-snD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="P2H-sM-Z8o"/>
+                            <constraint firstItem="nQc-gG-snD" firstAttribute="bottom" secondItem="vmx-ar-lDd" secondAttribute="bottom" constant="38" id="QEn-Fd-MGe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wEx-nf-FCW" secondAttribute="trailing" constant="16" id="Qod-t9-UCm"/>
+                            <constraint firstItem="vmx-ar-lDd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="RiY-hH-2JG"/>
+                            <constraint firstItem="UN9-Fu-MSN" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="UxU-0U-swY"/>
+                            <constraint firstItem="wEx-nf-FCW" firstAttribute="top" secondItem="2Jg-SA-h8W" secondAttribute="bottom" constant="8" id="VIE-pk-WYy"/>
+                            <constraint firstItem="QxE-xp-5RJ" firstAttribute="width" secondItem="nQc-gG-snD" secondAttribute="width" id="ZQP-sZ-4AS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Jg-SA-h8W" secondAttribute="trailing" id="cK5-di-qUW"/>
+                            <constraint firstItem="LqF-Ke-q6N" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="or1-gW-U5C"/>
+                            <constraint firstItem="2Jg-SA-h8W" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="x0x-Zh-UzW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h2O-yK-0fG" secondAttribute="trailing" constant="14" id="xCu-P7-eEQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nQc-gG-snD" secondAttribute="trailing" id="zBw-39-lXN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wze-GL-rlR"/>
+                    <connections>
+                        <outlet property="albumButton" destination="NQQ-Ln-nSR" id="bHl-Qr-9cr"/>
+                        <outlet property="cameraOptionView" destination="wEx-nf-FCW" id="W5h-Uy-FC9"/>
+                        <outlet property="containerView" destination="QxE-xp-5RJ" id="XSl-Ti-UpD"/>
+                        <outlet property="countdownSecondsLabel" destination="LqF-Ke-q6N" id="dry-br-ipy"/>
+                        <outlet property="doneButton" destination="hp8-gN-oGS" id="mmY-Ey-fVM"/>
+                        <outlet property="filterButton" destination="Y0p-vz-EpU" id="1UX-2q-dYc"/>
+                        <outlet property="filterCollectionView" destination="lvo-hd-mgF" id="hMQ-Vp-P4i"/>
+                        <outlet property="filterView" destination="UN9-Fu-MSN" id="jjD-df-pgX"/>
+                        <outlet property="filterViewBottomConstraint" destination="UxU-0U-swY" id="FM6-Ai-bkt"/>
+                        <outlet property="flashButton" destination="rAo-uL-yHD" id="waX-FN-yJc"/>
+                        <outlet property="foldButton" destination="QXi-ht-BBh" id="67x-Ni-LvO"/>
+                        <outlet property="gridButton" destination="EWX-Na-cOD" id="S18-nz-AKO"/>
+                        <outlet property="gridView" destination="YuJ-QW-rqk" id="mPO-jR-1Eq"/>
+                        <outlet property="intensitySlider" destination="AWt-x4-7sd" id="imP-ke-3H8"/>
+                        <outlet property="navigationBar" destination="2Jg-SA-h8W" id="28J-08-Sc5"/>
+                        <outlet property="noticeButton" destination="jqT-1L-MK4" id="F4Z-9k-DLL"/>
+                        <outlet property="recordActionStackView" destination="7i4-YL-GGH" id="ZD6-28-nxY"/>
+                        <outlet property="recordActionsView" destination="vmx-ar-lDd" id="Yfn-14-GiE"/>
+                        <outlet property="recordButton" destination="HwA-Mb-TZy" id="9MG-45-9Sr"/>
+                        <outlet property="recordDurationLabel" destination="IzA-p1-UzG" id="GoH-eN-MEE"/>
+                        <outlet property="recordProgressView" destination="1Vg-xM-eoV" id="1cR-AO-SbN"/>
+                        <outlet property="renderView" destination="nQc-gG-snD" id="3mo-0A-PnA"/>
+                        <outlet property="timerButton" destination="FRZ-HE-ybQ" id="DhO-Cr-J4T"/>
+                        <outlet property="undoButton" destination="kYA-TQ-PwB" id="2kn-hC-mgp"/>
+                        <outlet property="zoomButton" destination="h2O-yK-0fG" id="HSj-Mq-Y6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dbT-EC-NS3">
+                    <connections>
+                        <action selector="didTapWhole:" destination="Y6W-OH-hqX" id="bT2-Tp-VZ6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="937.85046728971952" y="34.98920086393089"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="HwA-Mb-TZy">
+            <size key="intrinsicContentSize" width="24" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icCameraFilter" width="36" height="36"/>
+        <image name="icCameraFlash" width="24" height="24"/>
+        <image name="icCameraGrid" width="24" height="24"/>
+        <image name="icCameraTimer" width="24" height="24"/>
+        <image name="icFoldDown" width="24" height="24"/>
+        <image name="icMainNotice" width="24" height="24"/>
+        <image name="icRecordDone" width="36" height="36"/>
+        <image name="icRecordStart" width="24" height="24"/>
+        <image name="icRecordUndo" width="36" height="36"/>
+        <namedColor name="black100">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black32">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.31999999284744263" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black80">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sheetDark">
+            <color red="0.14900000393390656" green="0.14900000393390656" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="gTV-IL-0wX" customClass="AlbumCell" customModule="feedeo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WW7-zO-nuc">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBy-1U-oAl" customClass="MultipleSelectionItemView" customModule="feedeo" customModuleProvider="target">
+                        <rect key="frame" x="22" y="4" width="24" height="24"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="KZl-ff-tt9"/>
+                            <constraint firstAttribute="width" constant="24" id="j13-9R-4is"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGj-zP-oUO">
+                        <rect key="frame" x="6" y="44" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" name="white100"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" name="black32"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="NO"/>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="WW7-zO-nuc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0Sx-ga-cvP"/>
+                <constraint firstAttribute="bottom" secondItem="pGj-zP-oUO" secondAttribute="bottom" constant="6" id="Myv-p8-kdE"/>
+                <constraint firstItem="iBy-1U-oAl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="Pts-aY-ned"/>
+                <constraint firstItem="WW7-zO-nuc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="T9V-2O-r0q"/>
+                <constraint firstItem="pGj-zP-oUO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="Vs5-U6-hW9"/>
+                <constraint firstAttribute="trailing" secondItem="iBy-1U-oAl" secondAttribute="trailing" constant="4" id="tC9-yL-0lU"/>
+                <constraint firstAttribute="trailing" secondItem="WW7-zO-nuc" secondAttribute="trailing" id="vF4-Ul-TTY"/>
+                <constraint firstAttribute="bottom" secondItem="WW7-zO-nuc" secondAttribute="bottom" id="zad-tW-dse"/>
+            </constraints>
+            <connections>
+                <outlet property="durationLabel" destination="pGj-zP-oUO" id="SAE-Mo-n2f"/>
+                <outlet property="selectionView" destination="iBy-1U-oAl" id="jS9-PT-yVg"/>
+                <outlet property="thumbnailView" destination="WW7-zO-nuc" id="2yR-r2-0fY"/>
+            </connections>
+            <point key="canvasLocation" x="6" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="black32">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.31999999284744263" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
