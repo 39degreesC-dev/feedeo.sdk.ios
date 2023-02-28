@@ -1,0 +1,11 @@
+framework module feedeo {
+  umbrella header "feedeo-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module feedeo.Swift {
+  header "feedeo-Swift.h"
+  requires objc
+}
